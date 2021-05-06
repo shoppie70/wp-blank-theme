@@ -1,0 +1,64 @@
+.drawer-hamburger,
+.drawer-nav {
+    z-index: 555;
+    -webkit-transition: all 1s cubic-bezier(.19, 1, .22, 1);
+    transition: all 1s cubic-bezier(.19, 1, .22, 1);
+    -webkit-transform: translateZ(0);
+}
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:after,
+.drawer-hamburger-icon:before {
+    background-color: white;
+}
+
+
+.drawer--right .drawer-nav {
+    -webkit-transition: right 1s cubic-bezier(.19, 1, .22, 1);
+    transition: right 1s cubic-bezier(.19, 1, .22, 1);
+}
+
+
+.drawer {
+
+	&-overlay{
+		z-index: 7;
+	}
+
+	&__logo{
+		background-color: white;
+		padding: 3rem 2rem;
+	}
+
+
+    &-nav {
+        background-color: #333;
+    }
+
+    &__content {
+        .topnav__link--contact {
+            margin-top: 1rem;
+            display: block;
+            color: white;
+            text-align: center;
+        }
+    }
+
+    &__menu {
+
+        &--wrap {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        &--item {
+            margin-bottom: 1rem;
+        }
+
+        &--anker {
+            color: white;
+        }
+    }
+}

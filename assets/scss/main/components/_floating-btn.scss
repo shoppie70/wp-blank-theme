@@ -1,0 +1,12 @@
+.floating-btn {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 5;
+
+    @include sp {
+        right: 0.5rem;
+        bottom: 1rem;
+    }
+}

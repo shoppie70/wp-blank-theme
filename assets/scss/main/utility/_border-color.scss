@@ -1,0 +1,26 @@
+$border-colors: join(
+                $colors,
+);
+
+$accessibility: (
+        'hover': ':hover',
+        'focus': ':focus',
+);
+
+@each $k, $v in $border-colors {
+  .border-#{$k} {
+    border-color: $v;
+  }
+
+  @each $accessibility_key, $accessibility_value in $accessibility {
+    .#{$accessibility_key}\:border-#{$k}#{$accessibility_value} {
+      border-color: $v;
+    }
+  }
+}
+
+@each $k, $v in $border-colors {
+  @include responsive('border-#{$k}') {
+    border-color: $v;
+  }
+}

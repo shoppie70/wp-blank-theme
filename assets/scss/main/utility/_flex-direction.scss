@@ -1,0 +1,18 @@
+$flex_warps: (
+        'row': row,
+        'row-reverse': row-reverse,
+        'col': column,
+        'col-reverse': column-reverse,
+);
+
+@each $k, $v in $flex_warps {
+  .flex-#{$k} {
+    flex-direction: $v;
+  }
+}
+
+@each $k, $v in $flex_warps {
+  @include responsive('flex-#{$k}') {
+    flex-direction: $v;
+  }
+}

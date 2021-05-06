@@ -1,0 +1,19 @@
+$align_items: (
+        'start': flex-start,
+        'end': flex-end,
+        'center': center,
+        'baseline': baseline,
+        'stretch': stretch,
+);
+
+@each $k, $v in $align_items {
+  .items-#{$k} {
+    align-items: $v;
+  }
+}
+
+@each $k, $v in $align_items {
+  @include responsive('items-#{$k}') {
+    align-items: $v;
+  }
+}

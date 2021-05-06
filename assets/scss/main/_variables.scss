@@ -1,0 +1,69 @@
+$font-family-base: "游ゴシック体",
+YuGothic,
+"游ゴシック Medium",
+"Yu Gothic Medium",
+"游ゴシック",
+"Yu Gothic",
+sans-serif;
+
+//========================
+// Colors
+//========================
+$color-text: #333;
+$color-bg: #fff;
+$color-primary: #e05d6c;
+$color-secondary: #8d8d8d;
+$color-danger: #c30414;
+//========================
+// Responsive
+//========================
+$pc: 1280px; // PC
+$tablet: 960px; // タブレット
+$sp: 767px; // スマホ
+//========================
+// Colors
+//========================
+$colors: (
+        'base': #333,
+        'bg': #fff,
+        'primary': #0b175a,
+        'secondary': #dce7f5,
+        'tertiary': #ebebeb,
+        'primary-light': #015faa,
+        'light': #f8f9fa,
+        'dark': #343a40,
+        'muted': #6c757d,
+        'success': #28a745,
+        'danger': #ef0918,
+        'warning': #efe109,
+        'info': #007bff,
+        'white': #ffffff,
+        'black': #000000,
+);
+
+//========================
+// Breakpoints
+//========================
+$breakpoints: (
+        'sm': 640px,
+        'md': 768px,
+        'lg': 1024px,
+        'xl': 1280px,
+);
+
+//========================
+// Font Sizes
+//========================
+$font-sizes: (
+        'xs': .75rem,
+        'sm': .875rem,
+        'base': 1rem,
+        'lg': 1.125rem,
+        'xl': 1.25rem,
+        '2xl': 1.5rem,
+        '3xl': 1.875rem,
+        '4xl': 2.25rem,
+        '5xl': 3rem,
+        '6xl': 4rem,
+);
+

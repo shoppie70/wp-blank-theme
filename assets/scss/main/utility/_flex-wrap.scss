@@ -1,0 +1,17 @@
+$flex_warps: (
+        'wrap': wrap,
+        'wrap-reverse': wrap-reverse,
+        'no-wrap': nowrap,
+);
+
+@each $k, $v in $flex_warps {
+  .flex-#{$k} {
+    flex-wrap: $v;
+  }
+}
+
+@each $k, $v in $flex_warps {
+  @include responsive('flex-#{$k}') {
+    flex-wrap: $v;
+  }
+}

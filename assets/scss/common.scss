@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+$project_prefix: 'main';
+
+$pages_dir : $project_prefix+'/pages/';
+$layouts_dir: $project_prefix+'/layouts/';
+$utility_dir: $project_prefix+'/utility/';
+$component_dir: $project_prefix+'/components/';
+
+
+$layouts: ('header',
+    'footer',
+    'drawer',
+    'responsive',
+);
+
+$components: ('breadcrumb',
+    'btn',
+    'component',
+    'floating-btn',
+    'heading',
+    'pagenation',
+    'topnav'
+);
+
+$pages: ('index'
+);
+
+$utilities: ('align-items',
+    'background-color',
+    'background-image',
+    'background-position',
+    'background-repeat',
+    'background-size',
+    'border-style',
+    'border-width',
+    'display',
+    'flex-direction',
+    'flex-wrap',
+    'font-size',
+    'font-weight',
+    'height',
+    'justify-content',
+    'justify-items',
+    'line-height',
+    'margin',
+    'max-width',
+    'padding',
+    'text-aligin',
+    'width',
+);
+
+@import "vendor/normalize";
+
+// Boot
+@import $project_prefix+'/variables';
+@import $project_prefix+'/mixin';
+@import $project_prefix+'/reboot';
+
+// Layout
+@each $file in $layouts {
+    @import $layouts_dir+$file;
+}
+
+// Pages
+@each $file in $pages {
+    @import $pages_dir+$file;
+}
+
+// Component
+@each $file in $components {
+    @import $component_dir+$file;
+}
+
+// Utility
+@each $file in $utilities {
+    @import $utility_dir+$file;
+}

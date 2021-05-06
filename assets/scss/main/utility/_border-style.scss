@@ -1,0 +1,19 @@
+$border-style: (
+        'solid': solid,
+        'dashed': dashed,
+        'dotted': dotted,
+        'double': double,
+        'none': none,
+);
+
+@each $k, $v in $border-style {
+  .border-#{$k} {
+    border-style: $v;
+  }
+}
+
+@each $k, $v in $border-style {
+  @include responsive('border-#{$k}') {
+    border-style: $v;
+  }
+}

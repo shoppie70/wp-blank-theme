@@ -1,0 +1,51 @@
+$border-widths: (
+        '0': 0,
+        '1': 1px,
+        '2': 2px,
+        '4': 4px,
+        '8': 8px,
+);
+
+@each $k, $v in $border-widths {
+  .border-#{$k} {
+    border-width: $v;
+  }
+
+  .border-t-#{$k} {
+    border-top-width: $v;
+  }
+
+  .border-b-#{$k} {
+    border-bottom-width: $v;
+  }
+
+  .border-l-#{$k} {
+    border-left-width: $v;
+  }
+
+  .border-r-#{$k} {
+    border-right-width: $v;
+  }
+}
+
+@each $k, $v in $border-widths {
+  @include responsive('border-#{$k}') {
+    border-width: $v;
+  }
+
+  @include responsive('border-t-#{$k}') {
+    border-top-width: $v;
+  }
+
+  @include responsive('border-b-#{$k}') {
+    border-bottom-width: $v;
+  }
+
+  @include responsive('border-l-#{$k}') {
+    border-left-width: $v;
+  }
+
+  @include responsive('border-r-#{$k}') {
+    border-right-width: $v;
+  }
+}

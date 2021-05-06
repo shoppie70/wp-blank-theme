@@ -1,0 +1,9 @@
+.bg {
+  &-cast {
+    background-image: url("../img/pages/top/bg_cast_sp.png");
+
+    @include display('md') {
+      background-image: url("../img/pages/top/bg_cast.png");
+    }
+  }
+}

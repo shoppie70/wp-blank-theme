@@ -1,0 +1,23 @@
+$bg-colors: join(
+                $colors,
+                (
+                        'transparent': transparent,
+                        'current': currentColor,
+                )
+);
+
+$accessibility: (
+        'hover': ':hover',
+);
+
+@each $k, $v in $bg-colors {
+  .bg-#{$k} {
+    background-color: $v;
+  }
+
+  @each $accessibility_key, $accessibility_value in $accessibility {
+    .#{$accessibility_key}\:bg-#{$k}#{$accessibility_value} {
+      background-color: $v;
+    }
+  }
+}

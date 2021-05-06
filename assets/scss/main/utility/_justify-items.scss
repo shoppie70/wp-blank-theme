@@ -1,0 +1,19 @@
+$justify_items: (
+        'auto': auto,
+        'start': start,
+        'end': end,
+        'center': center,
+        'stretch': stretch,
+);
+
+@each $k, $v in $justify_items {
+  .justify-items-#{$k} {
+    justify-items: $v;
+  }
+}
+
+@each $k, $v in $justify_items {
+  @include responsive('justify-items-#{$k}') {
+    justify-items: $v;
+  }
+}

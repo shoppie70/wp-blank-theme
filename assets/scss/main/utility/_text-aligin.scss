@@ -1,0 +1,12 @@
+$text-aligns: (
+        'left': left,
+        'center': center,
+        'right': right,
+        'justify': justify,
+);
+
+@each $k, $v in $text-aligns {
+  .text-#{$k} {
+    text-align: $v;
+  }
+}
